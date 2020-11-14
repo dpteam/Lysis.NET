@@ -6,10 +6,6 @@ on:
   pull_request:
     branches: [ main ]
 
-defaults:
-  run:
-    working-directory: LysisDotNET
-
 jobs:
   build:
 
@@ -33,4 +29,4 @@ jobs:
       uses: actions/upload-artifact@v2.1.1
       with:
         name: Lysis.NET Win64
-        path: /home/runner/work/Lysis.NET/Lysis.NET/LysisDotNET/bin/Debug/net5.0/win-x64/publish/
+        path: /home/runner/work/Lysis.NET/Lysis.NET/bin/Debug/net5.0/win-x64/publish/
