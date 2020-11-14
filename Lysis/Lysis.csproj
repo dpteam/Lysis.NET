@@ -1,0 +1,78 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <EnableDefaultCompileItems>False</EnableDefaultCompileItems>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D571D9D-4551-4DDC-96ED-EB6AB3EA0C32}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Lysis</RootNamespace>
+    <AssemblyName>Lysis</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+	<TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Lysis.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Lysis.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="BlockAnalysis.cs" />
+    <Compile Include="NodeAnalysis.cs" />
+    <Compile Include="LStructure.cs" />
+    <Compile Include="NodeList.cs" />
+    <Compile Include="NodeRenamer.cs" />
+    <Compile Include="NodeRewriter.cs" />
+    <Compile Include="NodeBlock.cs" />
+    <Compile Include="NodeBuilder.cs" />
+    <Compile Include="DebugSpew.cs" />
+    <Compile Include="MethodParser.cs" />
+    <Compile Include="Instructions.cs" />
+    <Compile Include="Nodes.cs" />
+    <Compile Include="SourceBuilder.cs" />
+    <Compile Include="SourcePawnFile.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties/AssemblyInfo.cs" />
+    <Compile Include="SourceStructure.cs" />
+    <Compile Include="TypePropagation.cs" />
+    <Compile Include="TypeSet.cs" />
+    <Compile Include="PawnFile.cs" />
+    <Compile Include="AMXModXFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lysis.ico" />
+  </ItemGroup>
+</Project>
